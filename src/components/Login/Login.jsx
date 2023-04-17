@@ -5,6 +5,7 @@ import { AuthContext } from '../provider/AuthProvider';
 
 const Login = () => {
     const [error, setError]= useState('')
+    const [show, setShow] = useState(false)
 
     const {singIn}= useContext(AuthContext);
     const navigate = useNavigate();
@@ -43,7 +44,15 @@ const Login = () => {
                 </div>
                 <div className='form-control'>
                     <label htmlFor="password">Password</label>
-                    <input type="password" name='password' id=''  required/>
+                    
+                    <input type={show ? "text" : "password"} name='password' id=''  required/>
+                <p onClick={()=> setShow(!show)}>
+                    <small>
+                        {
+                           show ? <span>hide password</span> :<span>show password</span>
+                        }
+                    </small>
+                </p>
                 </div>
                 <input type="submit" className='btn-submit' value="login" />
             </form>

@@ -15,13 +15,29 @@
  11. set the context value
  12. set the provider
  13.
- 14.
- 15.
- 16.
- 17.
- 18.
- 19.
- 20.
+
+
+ *****hosring
+ 14.one  time per pc
+ 15.npm install -g firebase-tools
+ 16.firebase login
+ 
+
+ for each project one time
+ 18.firebase init
+ 19.proceed
+ 20.hosting: firebase (up and down arrow) use space bar to select
+ 21.existing project
+ 22.select the project careful
+ 23. which project as public directory: dist
+ 24. single page applecation : yes
+ 25. continuous deployment: no
+
+
+ *****for every time deploy
+ 26.npm run build
+ 27.firebase deploy
+
 
 *
 *
